@@ -30,6 +30,7 @@ def filter_list(file_name):
     Input a file and return that file with
     - all 's words removed
     - no accented words
+    - all words that are > 25 in length
     """
     lst_words = openf(file_name)
     with open(f"{file_name[:-4]}x.txt","w") as f:
@@ -52,10 +53,41 @@ def split_file(file_name):
     for word in lst_words:
         files[len(word) - 1].write(word + "\n")
 
+def prune_words(chars:str, lst_words:list or str) -> list:
+    """
+    given a string meant to represented as a list of characters, take an inputted list of words (or file directory to be converted),
+    and return a list representing all words that can be formed formed from those given characters
+    """
+    #convert file directory to word list
+    if type(lst_words) == str:
+        lst_words = openf(lst_words)
+
+    final_lst_words = []
+    #for every word in list
+    for i in range(len(lst_words)):
+        #create duplicate of chars
+        temp_chars = [c for c in chars]
+        word_char = [c for c in lst_words[i]]
+        #while length of word != 0 and 
+        while len(word_char) != 0 and word_char[-1] in temp_chars:
+            #if condition met, pop last element off list, remove from temp_chars
+            temp_chars.remove(word_char.pop())
+        if len(word_char) == 0:
+            final_lst_words += [lst_words[i]]
+    return final_lst_words
+            
+    
+
+
 
 if __name__ == "__main__":
+    pass
     #collate_lists([10,20,35,40,50,55,60,70,80,95],"processed_word_lists\english_words100.txt")
     #collate_lists([10,20,35,40,50,55,60,70,80],"processed_word_lists\english_words52.txt")
     #collate_lists([10,20,35,40,50,55,60,70],"processed_word_lists\english_words25.txt")
-    #filter_list("processed_word_lists\english_words25.txt")
-    split_file("processed_word_lists\english_words25x.txt")
+    filter_list("processed_word_lists\english_words52.txt")
+    split_file("processed_word_lists\english_words52x.txt")
+    # for i in range(25,0,-1):
+    #     words = prune_words("kunjdvisriiopfeabadewowti",f"processed_word_lists\english_words25x\{i}-len.txt")
+    #     print(words)
+    
