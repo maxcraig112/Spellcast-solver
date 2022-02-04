@@ -55,7 +55,7 @@ def split_file(file_name):
 
 def prune_words(chars:str, lst_words:list or str) -> list:
     """
-    given a string meant to represented as a list of characters, take an inputted list of words (or file directory to be converted),
+    given a string meant to represent a list of characters, take an inputted list of words (or file directory to be converted),
     and return a list representing all words that can be formed formed from those given characters
     """
     #convert file directory to word list
@@ -85,8 +85,10 @@ if __name__ == "__main__":
     #collate_lists([10,20,35,40,50,55,60,70,80,95],"processed_word_lists\english_words100.txt")
     #collate_lists([10,20,35,40,50,55,60,70,80],"processed_word_lists\english_words52.txt")
     #collate_lists([10,20,35,40,50,55,60,70],"processed_word_lists\english_words25.txt")
-    filter_list("processed_word_lists\english_words52.txt")
-    split_file("processed_word_lists\english_words52x.txt")
+    #filter_list("processed_word_lists\english_words52.txt")
+    #split_file("processed_word_lists\english_words52x.txt")
+    words = prune_words("doomer",["doomer","domer","d","ddoomer","merdoo"])
+    print(words)
     # for i in range(25,0,-1):
     #     words = prune_words("kunjdvisriiopfeabadewowti",f"processed_word_lists\english_words25x\{i}-len.txt")
     #     print(words)

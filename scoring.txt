@@ -1,14 +1,16 @@
-Round 1: DL,
+Round 1: TL,
 Round 2: TL, 2x
 Round 3: TL, 2x
 Round 4: TL, 2x
 Round 5: TL, 2x
 
-A - 1
+BIG WORD BONUS - >= 7, worth 20 points
+
+A - 1 TL
 B - 4
-C - 5
+C - 5 DL
 D - 3
-E - 1
+E - 1 TL
 F - 5
 G - 3
 H - 4
@@ -19,14 +21,14 @@ L - 3
 M - 4
 N - 2
 O - 1
-P - 4
-Q - 8
-R - 2
-S - 2
+P - 4 DL
+Q - 8 TL
+R - 2 TL
+S - 2 DL
 T - 2
-U - 4
+U - 4 TL
 V - 5
-W - 5
+W - 5 DL
 X - 7
 Y - 4
 Z - 8
