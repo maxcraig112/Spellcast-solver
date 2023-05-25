@@ -120,10 +120,10 @@ if __name__ == "__main__":
     #s.get_best_words()
 
     #words = prune_words("iljsmibthaexwiuigearaquyo","processed_word_lists\english_words25x.txt")
-    s = spellcast("ogaotbyolttrsekiatwefmoeg","0110000110111001100001000",(4,0),2,None)
-    #s.get_best_words()
-    x = s.is_viable_word("gyrates")
-    print(x)
+    s = spellcast("efeaefeiorimtnttqcjcypuur","0110000110111001100001000",(0,0),2,(3,1))
+    s.get_best_words()
+    #x = s.is_viable_word("gyrates")
+    #print(x)
     #print(words)
     # word = "cat"
     # print(s.is_viable_word(word))
